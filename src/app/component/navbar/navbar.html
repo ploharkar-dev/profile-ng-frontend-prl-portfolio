@@ -1,32 +1,95 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-lg" style="background: linear-gradient(135deg, #0f172a 0%, #1a1a2e 50%, #0f172a 100%); border-bottom: 2px solid #00d4d4; backdrop-filter: blur(10px);" #navbar>
   <div class="container">
-    <a class="navbar-brand fw-bold fs-5" href="#home">
-      <i class="bi bi-person-circle"></i> Pinakeshwar
+    <a class="navbar-brand fw-bold" href="#home" style="font-size: 1.5rem; color: #00d4d4; letter-spacing: 1px; text-transform: uppercase; font-weight: 900;">
+      <i class="bi bi-lightning-fill" style="color: #00d4d4; margin-right: 8px; animation: glow 2s ease-in-out infinite;"></i> Pinakeshwar
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto gap-2">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'home'}" href="#home" (click)="setActive('home')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'experience'}" href="#experience" (click)="setActive('experience')">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'projects'}" href="#projects" (click)="setActive('projects')">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'education'}" href="#education" (click)="setActive('education')">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#awards">Awards</a>
+          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'awards'}" href="#awards" (click)="setActive('awards')">Awards</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'contact'}" href="#contact" (click)="setActive('contact')">Contact</a>
+        </li>
+        <li class="nav-item ms-2">
+          <a class="nav-link fw-bold px-3 py-2" href="https://linkedin.com/in/pinakeshwar-loharkar" target="_blank" style="color: #00d4d4; border: 2px solid #00d4d4; border-radius: 25px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#00d4d4'; this.style.color='#1a1a2e';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#00d4d4';">
+            <i class="bi bi-linkedin"></i>
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<style>
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 5px #00d4d4;
+    }
+    50% {
+      text-shadow: 0 0 15px #00d4d4, 0 0 25px rgba(0, 212, 212, 0.5);
+    }
+  }
+
+  .navbar-brand {
+    transition: all 0.3s ease;
+    font-size: 1.5rem !important;
+  }
+
+  .navbar-brand:hover {
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(0, 212, 212, 0.6);
+  }
+
+  .nav-link {
+    position: relative;
+    font-size: 0.95rem;
+    color: #e0e7ff !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4d4, #7c3aed);
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link:hover {
+    color: #00d4d4 !important;
+    transform: translateY(-3px);
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+  }
+
+  .nav-link.active {
+    color: #00d4d4 !important;
+    font-weight: 700;
+  }
+</style>
