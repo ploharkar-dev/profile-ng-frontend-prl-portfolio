@@ -1,84 +1,82 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#introduction">
-      <i class="bi bi-code-slash"></i><span class="ms-2">Hi, I’m glad you’re here!</span>
-    </a>
+<nav class="navbar">
+  <div class="navbar-container">
+    <a class="navbar-brand" href="#introduction">
+      <i class="bi bi-code-slash"></i><span class="brand-text">Hi, Nice to see you here!</span>    </a>
     <button
-      class="navbar-toggler border-0"
+      class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
       aria-controls="navbarNav"
-      aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-2">
+    <div class="navbar-menu" [class.open]="menuOpen" id="navbarNav">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a
-            class="nav-link fw-500"
+            class="nav-link"
             [ngClass]="{ active: activeSection === 'home' }"
             href="#introduction"
-            (click)="setActive('home')"
+            (click)="setActive('home'); closeMenu()"
             >Home</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-500"
+            class="nav-link"
             [ngClass]="{ active: activeSection === 'experience' }"
             href="#experience"
-            (click)="setActive('experience')"
+            (click)="setActive('experience'); closeMenu()"
             >Experience</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-500"
+            class="nav-link"
             [ngClass]="{ active: activeSection === 'projects' }"
             href="#projects"
-            (click)="setActive('projects')"
+            (click)="setActive('projects'); closeMenu()"
             >Projects</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-500"
+            class="nav-link"
             [ngClass]="{ active: activeSection === 'education' }"
             href="#education"
-            (click)="setActive('education')"
+            (click)="setActive('education'); closeMenu()"
             >Education</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-500"
+            class="nav-link"
             [ngClass]="{ active: activeSection === 'awards' }"
             href="#awards"
-            (click)="setActive('awards')"
+            (click)="setActive('awards'); closeMenu()"
             >Awards</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-500"
+            class="nav-link"
             [ngClass]="{ active: activeSection === 'contact' }"
             href="#contact"
-            (click)="setActive('contact')"
+            (click)="setActive('contact'); closeMenu()"
             >Contact</a
           >
         </li>
-        <li class="nav-item ms-2 ps-3 border-start border-secondary d-flex align-items-center">
-          <a class="nav-link p-0 pe-3 d-inline-flex"
+        <li class="nav-item social-links">
+          <a class="nav-link social-icon"
             href="https://www.linkedin.com/in/omkarloharkar/"
             target="_blank"
             title="LinkedIn Profile"
             aria-label="LinkedIn" >
             <i class="bi bi-linkedin"></i>
           </a>
-          <a class="nav-link p-0 d-inline-flex"
+          <a class="nav-link social-icon"
             href="https://github.com/ploharkar-dev/"
             target="_blank"
             title="GitHub Profile"
@@ -90,105 +88,3 @@
     </div>
   </div>
 </nav>
-
-<style>
-  /* Navbar background (gray) */
-  .navbar {
-    background-color: #6c757d; /* gray */
-  }
-
-  .navbar-brand {
-    color: #ffffff !important;
-    transition: color 0.2s ease;
-  }
-  .navbar-brand:hover {
-    color: #f8f9fa !important;
-  }
-
-  /* keep items on one line */
-  .navbar-nav {
-    white-space: nowrap;
-    flex-wrap: nowrap;
-  }
-
-  .nav-link {
-    position: relative;
-    font-size: 0.95rem;
-    color: #ffffff !important; /* make nav text white */
-    transition:
-      color 0.2s ease,
-      opacity 0.2s ease;
-    padding: 0.4rem 0.6rem !important;
-  }
-
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.85); /* subtle white underline */
-    transform: translateX(-50%);
-    transition: width 0.22s ease;
-  }
-
-  .nav-link:hover,
-  .nav-link.active {
-    color: #ffffff !important;
-    font-weight: 600;
-  }
-
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    width: 70%;
-    opacity: 0.95;
-  }
-
-  /* Social icons (LinkedIn / GitHub) white */
-  .navbar .bi {
-    color: #ffffff !important;
-    font-size: 1.05rem;
-    vertical-align: middle;
-  }
-
-  /* Separator left of social icons */
-  .nav-item.ms-2.ps-3.border-start {
-    border-color: rgba(255, 255, 255, 0.12) !important;
-  }
-
-  /* Toggler (hamburger) visible in white */
-  .navbar-toggler {
-    border: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.18rem rgba(255, 255, 255, 0.06);
-  }
-
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-
-  /* Make sure collapsed menu links also appear white */
-  .navbar-collapse .nav-link {
-    color: #ffffff !important;
-  }
-
-  /* small screens: reduce spacing to keep single line where possible */
-  @media (max-width: 900px) {
-    .nav-link {
-      padding: 0.35rem 0.45rem !important;
-      font-size: 0.9rem;
-    }
-    .navbar-brand {
-      font-size: 1rem;
-    }
-  }
-
-  /* accessibility: focus visible */
-  .nav-link:focus {
-    outline: 2px dashed rgba(255, 255, 255, 0.12);
-    outline-offset: 2px;
-  }
-</style>

@@ -9,6 +9,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 })
 export class Navbar implements OnInit {
   activeSection: string = 'home';
+  menuOpen: boolean = false;
   private isBrowser: boolean;
 
   constructor(@Inject(PLATFORM_ID) platformId: Object) {
@@ -26,6 +27,14 @@ export class Navbar implements OnInit {
     if (this.isBrowser) {
       this.detectActiveSection();
     }
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 
   setActive(section: string) {

@@ -1,113 +1,47 @@
 main {
   width: 100%;
-  background-color: #ffffff;
+  background: linear-gradient(180deg, #1a1f2e 0%, #0f1419 100%);
+  color: #edf2f7;
+  position: relative;
+  overflow: hidden
+}
+
+main::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(0, 212, 212, 0.08) 0%, transparent 30%), radial-gradient(circle at 90% 80%, rgba(123, 97, 255, 0.06) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: 0
+}
+
+main>section,
+main>app-introduction,
+main>footer {
+  position: relative;
+  z-index: 1
 }
 
 section {
   scroll-margin-top: 80px;
+  background: transparent;
+  padding: 0
 }
 
-/* Section styling */
 section#experience,
+section#projects,
 section#education,
 section#awards,
-section#info {
-  padding: 5rem 0;
-}
-
-section#introduction {
-  padding: 0;
-}
-
+section#info,
 section#contact {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
-  color: white;
+  background: transparent;
+  padding: 0
 }
 
-.display-5 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: #212529;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.display-5::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #0d6efd 0%, #0dcaf0 100%);
-  border-radius: 2px;
-}
-
-/* Alternating backgrounds */
-section:nth-of-type(even) {
-  background-color: #f8f9fa;
-}
-
-section:nth-of-type(odd) {
-  background-color: #ffffff;
-}
-
-section#contact {
-  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
-}
-
-section#contact .display-5 {
-  color: white;
-}
-
-section#contact .display-5::after {
-  background: linear-gradient(90deg, #ffc107 0%, #ffb300 100%);
-}
-
-/* Container padding */
-.container {
-  max-width: 1200px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  section#experience,
-  section#education,
-  section#awards,
-  section#info,
-  section#contact {
-    padding: 3rem 0;
-  }
-
-  .display-5 {
-    font-size: 2rem;
-  }
-
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  section#experience,
-  section#education,
-  section#awards,
-  section#info,
-  section#contact {
-    padding: 2rem 0;
-  }
-
-  .display-5 {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-  }
-
-  .display-5::after {
-    width: 40px;
-    height: 3px;
-  }
+#footer {
+  background: transparent;
+  padding: 0
 }
