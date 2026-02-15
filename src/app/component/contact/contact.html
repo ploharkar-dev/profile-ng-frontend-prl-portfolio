@@ -1,105 +1,94 @@
 <div class="contact-section">
-  <div class="contact-container">
-    <!-- Header -->
-    <div class="contact-header">
-      <div class="header-decoration"></div>
+  <div class="contact-wrapper">
+    <!-- Section Header -->
+    <div class="section-header">
+      <div class="header-accent"></div>
       <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">Let's connect and explore opportunities together</p>
-      <div class="header-underline"></div>
+      <p class="section-subtitle">Let's connect and collaborate on amazing projects</p>
     </div>
 
-    <!-- Contact Cards Grid -->
-    <div class="cards-grid">
-      <!-- Email Card -->
-      <div class="premium-card">
-        <div class="card-content">
-          <div class="icon-wrapper email-icon">
-            <i class="bi bi-envelope-fill"></i>
-          </div>
-          <h6 class="card-label">Email</h6>
-          <a href="mailto:ploharkar21@gmail.com" class="card-link">ploharkar21@gmail.com</a>
+    <!-- Quick Contact Cards -->
+    <div class="quick-contact">
+      <a href="mailto:ploharkar21@gmail.com" class="contact-card email-card">
+        <div class="card-icon-box">
+          <i class="bi bi-envelope-fill"></i>
         </div>
-      </div>
-
-      <!-- Phone Card -->
-      <div class="premium-card">
-        <div class="card-content">
-          <div class="icon-wrapper phone-icon">
-            <i class="bi bi-telephone-fill"></i>
-          </div>
-          <h6 class="card-label">Phone</h6>
-          <a href="tel:+918308032898" class="card-link">+91 8308032898</a>
+        <div class="card-info">
+          <h4>Email</h4>
+          <p>ploharkar21@gmail.com</p>
         </div>
-      </div>
+        <i class="bi bi-arrow-right arrow-icon"></i>
+      </a>
 
-      <!-- Location Card -->
-      <div class="premium-card">
-        <div class="card-content">
-          <div class="icon-wrapper location-icon">
-            <i class="bi bi-geo-alt-fill"></i>
-          </div>
-          <h6 class="card-label">Location</h6>
-          <p class="card-text">Nashik, Maharashtra<br>422305, India</p>
+      <a href="tel:+918308032898" class="contact-card phone-card">
+        <div class="card-icon-box">
+          <i class="bi bi-telephone-fill"></i>
         </div>
-      </div>
-
-      <!-- LinkedIn Card -->
-      <div class="premium-card">
-        <div class="card-content">
-          <div class="icon-wrapper linkedin-icon">
-            <i class="bi bi-linkedin"></i>
-          </div>
-          <h6 class="card-label">LinkedIn</h6>
-          <a href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" class="card-link">/in/omkarloharkar</a>
+        <div class="card-info">
+          <h4>Phone</h4>
+          <p>+91 8308032898</p>
         </div>
-      </div>
+        <i class="bi bi-arrow-right arrow-icon"></i>
+      </a>
 
-      <!-- GitHub Card -->
-      <div class="premium-card">
-        <div class="card-content">
-          <div class="icon-wrapper github-icon">
-            <i class="bi bi-github"></i>
-          </div>
-          <h6 class="card-label">GitHub</h6>
-          <a href="https://github.com/ploharkar-dev/" target="_blank" class="card-link">/ploharkar-dev</a>
+      <div class="contact-card location-card">
+        <div class="card-icon-box">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div class="card-info">
+          <h4>Location</h4>
+          <p>Nashik, Maharashtra 422305</p>
         </div>
       </div>
     </div>
 
-    <!-- Contact Form Section -->
-    <div class="form-wrapper">
-      <div class="form-header">
-        <h3>Send Me a Message</h3>
-        <p>I'd love to hear from you. Drop me a line!</p>
+    <!-- Social Links -->
+    <div class="social-links-section">
+      <h3>Connect With Me</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" class="social-icon linkedin-icon" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/ploharkar-dev/" target="_blank" class="social-icon github-icon" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon twitter-icon" title="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
       </div>
+    </div>
 
-      <form class="premium-form">
-        <div class="form-row">
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <h3 class="form-title">Send Me a Message</h3>
+      <form class="contact-form">
+        <div class="form-grid">
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="John Doe" required>
+            <input type="text" id="name" placeholder="Your name" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="you@example.com" required>
+            <input type="email" id="email" placeholder="your@email.com" required>
           </div>
         </div>
 
         <div class="form-group">
           <label for="subject">Subject</label>
-          <input type="text" id="subject" placeholder="What is this about?" required>
+          <input type="text" id="subject" placeholder="What's this about?" required>
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" placeholder="Your message..." rows="6" required></textarea>
+          <textarea id="message" placeholder="Your message here..." rows="5" required></textarea>
         </div>
 
-        <button type="submit" class="submit-btn">
-          <span class="btn-text">Send Message</span>
+        <button type="submit" class="send-btn">
+          Send Message
           <i class="bi bi-arrow-right"></i>
         </button>
       </form>
     </div>
   </div>
 </div>
+
