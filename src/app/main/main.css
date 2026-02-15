@@ -1,0 +1,59 @@
+main {
+  position: relative;
+  width: 100%;
+}
+
+section {
+  scroll-margin-top: 70px;
+  transition: all 0.3s ease;
+}
+
+/* Alternating background sections */
+section:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+section:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+section#contact {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 0 !important;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Smooth section transitions */
+section {
+  border-top: 1px solid transparent;
+}
+
+section#experience {
+  border-top-color: transparent;
+}
+
+section#education {
+  border-top-color: transparent;
+}
+
+section#awards {
+  border-top-color: transparent;
+}
+
+section#info {
+  border-top-color: transparent;
+}
+
+section#contact {
+  border-top-color: transparent;
+}

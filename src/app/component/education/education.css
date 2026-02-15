@@ -1,0 +1,93 @@
+.education-card {
+  border: 2px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #198754 0%, #0d6efd 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: #198754;
+  box-shadow: 0 10px 30px rgba(25, 135, 84, 0.15) !important;
+  transform: translateY(-5px);
+}
+
+.education-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #198754 0%, #144e34 100%) !important;
+  border: none !important;
+}
+
+.card-title {
+  color: #198754;
+  font-weight: 700;
+}
+
+.badge-success {
+  background-color: #198754 !important;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+.badge-success:hover {
+  background-color: #144e34 !important;
+  transform: scale(1.05);
+}
+
+.text-success {
+  color: #198754 !important;
+  font-weight: 700;
+}
+
+/* Achievements */
+.row.mb-2 strong {
+  color: #212529;
+}
+
+.row.mb-0 strong {
+  color: #212529;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.text-muted.small {
+  font-size: 0.9rem;
+}
+
+.text-secondary {
+  color: #495057 !important;
+}
+
+@media (max-width: 768px) {
+  .col-lg-10 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .row.g-4 > [class*="col-"] {
+    padding-bottom: 1rem;
+  }
+
+  .education-card {
+    border: 1px solid #f0f0f0;
+  }
+}

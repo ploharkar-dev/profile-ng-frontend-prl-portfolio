@@ -1,0 +1,96 @@
+.experience-card {
+  border-left: 4px solid #0d6efd !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #0d6efd 0%, transparent 100%);
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.experience-card:hover {
+  border-left-color: #198754 !important;
+  transform: translateX(5px);
+  box-shadow: -5px 10px 30px rgba(13, 110, 253, 0.15) !important;
+}
+
+.experience-card:hover::before {
+  background: linear-gradient(180deg, #198754 0%, transparent 100%);
+}
+
+.card-title {
+  color: #0d6efd;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-title:hover {
+  color: #0b5ed7;
+}
+
+.badge {
+  background-color: #0d6efd !important;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background-color: #0b5ed7 !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.list-unstyled li {
+  color: #495057;
+  transition: all 0.3s ease;
+  padding-left: 0;
+}
+
+.list-unstyled li:hover {
+  color: #0d6efd;
+  padding-left: 0.5rem;
+}
+
+.bi-check-circle {
+  color: #198754;
+  font-size: 1rem;
+}
+
+/* Tech Skills Badges */
+.experience-card .badge {
+  background-color: #f8f9fa !important;
+  color: #495057 !important;
+  border: 1px solid #dee2e6;
+  margin: 0.25rem;
+}
+
+.experience-card .badge:hover {
+  background-color: #0d6efd !important;
+  color: white !important;
+  border-color: #0d6efd !important;
+}
+
+@media (max-width: 768px) {
+  .experience-card {
+    border-left-width: 3px !important;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .col-lg-10 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

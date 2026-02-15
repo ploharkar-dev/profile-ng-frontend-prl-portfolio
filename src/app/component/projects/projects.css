@@ -1,0 +1,16 @@
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.project-header {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, rgba(13, 110, 253, 0.8) 100%);
+}
+
+.project-card:nth-child(2) .project-header {
+  background: linear-gradient(135deg, var(--bs-success) 0%, rgba(25, 135, 84, 0.8) 100%);
+}

@@ -1,0 +1,15 @@
+/* App Component Styles */
+:host {
+  display: block;
+  background-color: #ffffff;
+}
+
+app-main {
+  display: block;
+}
+
+/* Ensure proper layout flow */
+body {
+  margin: 0;
+  padding: 0;
+}

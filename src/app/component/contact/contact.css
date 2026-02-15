@@ -1,0 +1,209 @@
+/* Contact Cards */
+.card {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.2));
+}
+
+.card-body {
+  padding: 2rem 1rem;
+}
+
+.card-body i {
+  transition: all 0.3s ease;
+}
+
+.card:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.h2 {
+  color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.card:hover .h2 {
+  color: #ffc107;
+  text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+}
+
+.card-title {
+  color: #f8f9fa;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card-text {
+  color: #e9ecef;
+}
+
+a {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffc107;
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  color: #ffc107;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Contact Form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-label {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid transparent;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  color: #212529;
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  color: #212529;
+}
+
+textarea.form-control {
+  resize: vertical;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-lg {
+  background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+  color: #212529;
+  font-weight: 700;
+  border: none;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-lg:hover {
+  background: linear-gradient(135deg, #ffb300 0%, #ffa500 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+  color: #212529;
+}
+
+.btn-lg:active {
+  transform: translateY(-1px);
+}
+
+/* Contact Info Grid */
+.row.g-4 > [class*="col-"] {
+  margin-bottom: 1rem;
+}
+
+/* Icon Circles Background */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.card:hover {
+  animation: float 2s ease-in-out;
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 calc(25% - 1rem);
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .col-lg-3 {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+
+  .col-lg-8 {
+    flex: 0 0 100%;
+  }
+
+  .offset-lg-2 {
+    margin-left: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card-body {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-control {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .btn-lg {
+    padding: 0.65rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .h2 {
+    font-size: 1.75rem;
+  }
+
+  .row.g-4 {
+    gap: 1rem !important;
+  }
+}
+
+/* Form Container */
+.bg-light.rounded-3 {
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  backdrop-filter: blur(5px);
+}
+
+.bg-light.rounded-3 .card-title {
+  color: #212529;
+}
