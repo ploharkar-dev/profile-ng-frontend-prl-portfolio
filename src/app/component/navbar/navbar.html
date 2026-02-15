@@ -1,36 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" style="background-color: #ffffff; border-bottom: 1px solid #e5e7eb;">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#introduction" style="font-size: 1.3rem; color: #1a1a2e; letter-spacing: 0.5px;">
-      <i class="bi bi-code-slash" style="color: #00d4d4; margin-right: 6px; font-size: 1.2rem;"></i>Pinakeshwar
+    <a class="navbar-brand fw-bold" href="#introduction">
+      <i class="bi bi-code-slash"></i><span class="ms-2">Pinakeshwar</span>
     </a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-1">
+      <ul class="navbar-nav ms-auto gap-2">
         <li class="nav-item">
-          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'home'}" href="#introduction" (click)="setActive('home')" style="color: #2d3748; white-space: nowrap;">Home</a>
+          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'home'}" href="#introduction" (click)="setActive('home')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'experience'}" href="#experience" (click)="setActive('experience')" style="color: #2d3748; white-space: nowrap;">Experience</a>
+          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'experience'}" href="#experience" (click)="setActive('experience')">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'projects'}" href="#projects" (click)="setActive('projects')" style="color: #2d3748; white-space: nowrap;">Projects</a>
+          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'projects'}" href="#projects" (click)="setActive('projects')">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'education'}" href="#education" (click)="setActive('education')" style="color: #2d3748; white-space: nowrap;">Education</a>
+          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'education'}" href="#education" (click)="setActive('education')">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'awards'}" href="#awards" (click)="setActive('awards')" style="color: #2d3748; white-space: nowrap;">Awards</a>
+          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'awards'}" href="#awards" (click)="setActive('awards')">Awards</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'contact'}" href="#contact" (click)="setActive('contact')" style="color: #2d3748; white-space: nowrap;">Contact</a>
+          <a class="nav-link fw-500" [ngClass]="{'active': activeSection === 'contact'}" href="#contact" (click)="setActive('contact')">Contact</a>
         </li>
-        <li class="nav-item ms-3 ps-2 border-start" style="border-color: #e5e7eb;">
-          <a class="nav-link p-0 pe-2" href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" title="LinkedIn Profile" style="color: #2d3748; font-size: 1.2rem; transition: color 0.3s ease;">
+        <li class="nav-item ms-2 ps-3 border-start border-secondary">
+          <a class="nav-link p-0 pe-3" href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" title="LinkedIn Profile">
             <i class="bi bi-linkedin"></i>
           </a>
-          <a class="nav-link p-0 ps-2" href="https://github.com/ploharkar-dev/" target="_blank" title="GitHub Profile" style="color: #2d3748; font-size: 1.2rem; transition: color 0.3s ease;">
+          <a class="nav-link p-0" href="https://github.com/ploharkar-dev/" target="_blank" title="GitHub Profile">
             <i class="bi bi-github"></i>
           </a>
         </li>
