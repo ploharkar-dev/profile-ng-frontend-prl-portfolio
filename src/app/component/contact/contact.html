@@ -1,114 +1,94 @@
-<div class="row g-4 mb-5">
-  <!-- Email -->
-  <div class="col-md-6 col-lg-3">
-    <div class="card border-0 text-white bg-transparent text-center">
-      <div class="card-body">
-        <div class="h2 mb-3">
+<div class="contact-section">
+  <div class="contact-wrapper">
+    <!-- Section Header -->
+    <div class="section-header">
+      <div class="header-accent"></div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Let's connect and collaborate on amazing projects</p>
+    </div>
+
+    <!-- Quick Contact Cards -->
+    <div class="quick-contact">
+      <a href="mailto:ploharkar21@gmail.com" class="contact-card email-card">
+        <div class="card-icon-box">
           <i class="bi bi-envelope-fill"></i>
         </div>
-        <h6 class="card-title">Email</h6>
-        <p class="card-text small">
-          <a href="mailto:ploharkar21@gmail.com" class="text-white text-decoration-none">
-            ploharkar21@gmail.com
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
+        <div class="card-info">
+          <h4>Email</h4>
+          <p>ploharkar21@gmail.com</p>
+        </div>
+        <i class="bi bi-arrow-right arrow-icon"></i>
+      </a>
 
-  <!-- Phone -->
-  <div class="col-md-6 col-lg-3">
-    <div class="card border-0 text-white bg-transparent text-center">
-      <div class="card-body">
-        <div class="h2 mb-3">
+      <a href="tel:+918308032898" class="contact-card phone-card">
+        <div class="card-icon-box">
           <i class="bi bi-telephone-fill"></i>
         </div>
-        <h6 class="card-title">Phone</h6>
-        <p class="card-text small">
-          <a href="tel:+918308032898" class="text-white text-decoration-none">
-            +91 8308032898
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
+        <div class="card-info">
+          <h4>Phone</h4>
+          <p>+91 8308032898</p>
+        </div>
+        <i class="bi bi-arrow-right arrow-icon"></i>
+      </a>
 
-  <!-- Location -->
-  <div class="col-md-6 col-lg-3">
-    <div class="card border-0 text-white bg-transparent text-center">
-      <div class="card-body">
-        <div class="h2 mb-3">
+      <div class="contact-card location-card">
+        <div class="card-icon-box">
           <i class="bi bi-geo-alt-fill"></i>
         </div>
-        <h6 class="card-title">Location</h6>
-        <p class="card-text small">
-          Nashik, Maharashtra 422305, India
-        </p>
+        <div class="card-info">
+          <h4>Location</h4>
+          <p>Nashik, Maharashtra 422305</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- LinkedIn -->
-  <div class="col-md-6 col-lg-3">
-    <div class="card border-0 text-white bg-transparent text-center">
-      <div class="card-body">
-        <div class="h2 mb-3" style="color: #0A66C2;">
+    <!-- Social Links -->
+    <div class="social-links-section">
+      <h3>Connect With Me</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" class="social-icon linkedin-icon" title="LinkedIn">
           <i class="bi bi-linkedin"></i>
-        </div>
-        <h6 class="card-title">LinkedIn</h6>
-        <p class="card-text small">
-          <a href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" class="text-white text-decoration-none">
-            /in/omkarloharkar
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- GitHub -->
-  <div class="col-md-6 col-lg-3">
-    <div class="card border-0 text-white bg-transparent text-center">
-      <div class="card-body">
-        <div class="h2 mb-3" style="color: #e0e7ff;">
+        </a>
+        <a href="https://github.com/ploharkar-dev/" target="_blank" class="social-icon github-icon" title="GitHub">
           <i class="bi bi-github"></i>
-        </div>
-        <h6 class="card-title">GitHub</h6>
-        <p class="card-text small">
-          <a href="https://github.com/ploharkar-dev/" target="_blank" class="text-white text-decoration-none">
-            /ploharkar-dev
-          </a>
-        </p>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon twitter-icon" title="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
       </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <h3 class="form-title">Send Me a Message</h3>
+      <form class="contact-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="What's this about?" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Your message here..." rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">
+          Send Message
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
     </div>
   </div>
 </div>
 
-<!-- Contact Form -->
-<div class="row">
-  <div class="col-lg-8 offset-lg-2">
-    <div class="card border-0 bg-light rounded-3">
-      <div class="card-body p-4">
-        <h5 class="card-title mb-4 text-dark">Send Me a Message</h5>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control rounded-2" id="name" placeholder="Your name" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control rounded-2" id="email" placeholder="your@email.com" required>
-          </div>
-          <div class="mb-3">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" class="form-control rounded-2" id="subject" placeholder="Message subject" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control rounded-2" id="message" rows="5" placeholder="Your message..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg rounded-pill w-100">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>

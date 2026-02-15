@@ -1,75 +1,270 @@
-<main>
+<main class="dark-theme-main">
   <app-introduction></app-introduction>
 
   <!-- Experience Section -->
-  <section id="experience" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="display-5 fw-bold mb-5 text-center">Professional Experience</h2>
-      <app-experience></app-experience>
-    </div>
+  <section id="experience">
+    <app-experience></app-experience>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-5">
-    <div class="container">
-      <h2 class="display-5 fw-bold mb-5 text-center">Featured Projects</h2>
-      <app-projects></app-projects>
-    </div>
+  <section id="projects">
+    <app-projects></app-projects>
   </section>
 
   <!-- Education Section -->
-  <section id="education" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="display-5 fw-bold mb-5 text-center">Education</h2>
-      <app-education></app-education>
-    </div>
+  <section id="education">
+    <app-education></app-education>
   </section>
 
   <!-- Awards Section -->
-  <section id="awards" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="display-5 fw-bold mb-5 text-center">Awards & Certifications</h2>
-      <app-awards></app-awards>
-    </div>
+  <section id="awards">
+    <app-awards></app-awards>
   </section>
 
   <!-- Personal Info Section -->
-  <section id="info" class="py-5">
-    <div class="container">
-      <h2 class="display-5 fw-bold mb-5 text-center">About Me</h2>
-      <app-info></app-info>
-    </div>
+  <section id="info">
+    <app-info></app-info>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-5 bg-primary text-white">
-    <div class="container">
-      <h2 class="display-5 fw-bold mb-5 text-center">Get In Touch</h2>
-      <app-contact></app-contact>
-    </div>
+  <section id="contact">
+    <app-contact></app-contact>
   </section>
 
   <!-- Footer Section -->
-  <footer class="bg-dark text-white py-4 text-center border-top border-secondary">
-    <div class="container">
-      <p class="mb-0">
-        <strong>Pinakeshwar Rajendra Loharkar</strong> | Senior Software Developer
-      </p>
-      <p class="mb-2 small text-muted">
-        Nashik, Maharashtra | India 422305 | ploharkar21@gmail.com | +91 8308032898
-      </p>
-      <div class="mt-3">
-        <a href="https://linkedin.com/in/pinakeshwar-loharkar" target="_blank" class="text-white me-3">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="mailto:ploharkar21@gmail.com" class="text-white me-3">
-          <i class="bi bi-envelope"></i>
-        </a>
+  <footer class="footer-section">
+    <div class="footer-container">
+      <!-- Top Section: Branding & Social -->
+      <div class="footer-top">
+        <div class="footer-branding">
+          <h3 class="footer-name">Pinakeshwar Rajendra Loharkar</h3>
+          <p class="footer-title">Senior Software Developer | Cloud-Native Solutions Architect</p>
+        </div>
+        
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" class="social-link linkedin" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/ploharkar-dev/" target="_blank" class="social-link github" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="mailto:ploharkar21@gmail.com" class="social-link email" title="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
       </div>
-      <hr class="border-secondary my-3">
-      <p class="small text-muted mb-0">
-        &copy; 2024-2026 Pinakeshwar Loharkar. All rights reserved.
-      </p>
+
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Bottom Section: Info & Copyright -->
+      <div class="footer-bottom">
+        <div class="footer-info">
+          <p class="footer-location">
+            <i class="bi bi-geo-alt-fill"></i> Nashik, Maharashtra | India 422305
+          </p>
+          <p class="footer-made">Made with <span class="heart">❤️</span> using Angular & Modern Web Tech</p>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2024-2026 Pinakeshwar Rajendra Loharkar. All rights reserved.
+        </p>
+      </div>
     </div>
+
+    <style>
+      .footer-section {
+        background: linear-gradient(180deg, #1a1f2e 0%, #0f1419 100%);
+        color: #edf2f7;
+        padding: 4rem 2rem 2.5rem;
+        border-top: 1px solid rgba(0, 212, 212, 0.15);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(circle at 20% 50%, rgba(0, 212, 212, 0.03) 0%, transparent 25%),
+          radial-gradient(circle at 80% 80%, rgba(123, 97, 255, 0.02) 0%, transparent 25%);
+        pointer-events: none;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-branding {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .footer-name {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        background: linear-gradient(90deg, #00d4d4 0%, #7b61ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .footer-title {
+        font-size: 0.95rem;
+        color: rgba(237, 242, 247, 0.8);
+        margin: 0;
+        font-weight: 300;
+      }
+
+      .footer-socials {
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+      }
+
+      .social-link {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        border: 1.5px solid rgba(0, 212, 212, 0.3);
+        color: #00d4d4;
+        text-decoration: none;
+      }
+
+      .social-link:hover {
+        background: linear-gradient(135deg, rgba(0, 212, 212, 0.1), rgba(123, 97, 255, 0.1));
+        border-color: rgba(123, 97, 255, 0.5);
+        transform: translateY(-4px);
+        color: #7b61ff;
+      }
+
+      .social-link.linkedin:hover { color: #0A66C2; border-color: #0A66C2; }
+      .social-link.github:hover { color: #1f2937; border-color: #1f2937; }
+      .social-link.email:hover { color: #ff6b6b; border-color: #ff6b6b; }
+
+      .footer-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 212, 0.2) 50%, transparent 100%);
+        margin: 2rem 0;
+      }
+
+      .footer-bottom {
+        text-align: center;
+      }
+
+      .footer-info {
+        margin-bottom: 1.25rem;
+      }
+
+      .footer-location {
+        font-size: 0.95rem;
+        color: rgba(237, 242, 247, 0.9);
+        margin: 0 0 0.75rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .footer-location i {
+        color: #00d4d4;
+        font-size: 1rem;
+      }
+
+      .footer-made {
+        font-size: 0.9rem;
+        color: rgba(237, 242, 247, 0.75);
+        margin: 0;
+        font-weight: 300;
+      }
+
+      .heart {
+        display: inline-block;
+        animation: heartbeat 0.6s ease-in-out infinite;
+        margin: 0 0.25rem;
+      }
+
+      .footer-copyright {
+        font-size: 0.85rem;
+        color: rgba(237, 242, 247, 0.6);
+        margin: 0;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(0, 212, 212, 0.1);
+      }
+
+      @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.15); }
+      }
+
+      @media (max-width: 768px) {
+        .footer-section { padding: 2.5rem 1rem 1.5rem; }
+        .footer-top { flex-direction: column; justify-content: center; gap: 1.5rem; }
+        .footer-branding { text-align: center; }
+        .footer-name { font-size: 1.2rem; }
+        .footer-title { font-size: 0.9rem; }
+        .footer-socials { justify-content: center; }
+        .social-link { width: 42px; height: 42px; font-size: 1rem; }
+      }
+
+      /* Global Dark Theme for Home Page */
+      .dark-theme-main {
+        background: linear-gradient(180deg, #1a1f2e 0%, #0f1419 100%);
+        color: #edf2f7;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-theme-main::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(circle at 10% 20%, rgba(0, 212, 212, 0.08) 0%, transparent 30%),
+          radial-gradient(circle at 90% 80%, rgba(123, 97, 255, 0.06) 0%, transparent 30%);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .dark-theme-main > section,
+      .dark-theme-main > app-introduction {
+        position: relative;
+        z-index: 1;
+      }
+
+      section#experience,
+      section#projects,
+      section#education,
+      section#awards,
+      section#info,
+      section#contact {
+        background: transparent;
+        padding: 0;
+      }
+    </style>
   </footer>
 </main>

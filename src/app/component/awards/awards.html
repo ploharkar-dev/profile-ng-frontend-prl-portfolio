@@ -1,76 +1,340 @@
-<div class="row g-4">
-  <!-- Award 1 -->
-  <div class="col-lg-10 offset-lg-1">
-    <div class="row g-4">
-  <!-- Award 1 -->
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm rounded-3 award-card h-100">
-      <div class="card-body text-center p-4">
-        <div class="display-4 text-warning mb-3">
+<div class="awards-section">
+  <div class="awards-wrapper">
+    <!-- Header -->
+    <div class="section-header">
+      <div class="header-accent"></div>
+      <h2 class="section-title">Awards & Certifications</h2>
+      <p class="section-subtitle">Recognition & professional achievements</p>
+    </div>
+
+    <!-- Awards Grid -->
+    <div class="awards-grid">
+      <!-- Award 1 -->
+      <div class="award-card">
+        <div class="award-icon-wrapper best-learner">
           <i class="bi bi-trophy-fill"></i>
         </div>
-        <h5 class="card-title fw-bold mb-2">Best Learner</h5>
-        <p class="text-muted small mb-2">Infosys | Q1 2024</p>
-        <p class="text-secondary">Recognized for outstanding learning and expertise development</p>
+        <h3 class="award-title">Best Learner</h3>
+        <p class="award-issuer">Infosys | Q1 2024</p>
+        <p class="award-description">Recognized for outstanding learning and expertise development</p>
       </div>
-    </div>
-  </div>
 
-  <!-- Award 2 -->
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm rounded-3 award-card h-100">
-      <div class="card-body text-center p-4">
-        <div class="display-4 text-info mb-3">
+      <!-- Award 2 -->
+      <div class="award-card">
+        <div class="award-icon-wrapper rising-star">
           <i class="bi bi-star-fill"></i>
         </div>
-        <h5 class="card-title fw-bold mb-2">Rising Star</h5>
-        <p class="text-muted small mb-2">Infosys | Q3 2025</p>
-        <p class="text-secondary">Recognized for exceptional growth and technical contributions</p>
+        <h3 class="award-title">Rising Star</h3>
+        <p class="award-issuer">Infosys | Q3 2025</p>
+        <p class="award-description">Recognized for exceptional growth and technical contributions</p>
       </div>
-    </div>
-  </div>
 
-  <!-- Award 3 -->
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm rounded-3 award-card h-100">
-      <div class="card-body text-center p-4">
-        <div class="display-4 text-success mb-3">
+      <!-- Award 3 -->
+      <div class="award-card">
+        <div class="award-icon-wrapper digital-commerce">
           <i class="bi bi-award-fill"></i>
         </div>
-        <h5 class="card-title fw-bold mb-2">Digital Commerce Professional</h5>
-        <p class="text-muted small mb-2">Infosys Equinox | 2024</p>
-        <p class="text-secondary">Professional certification in digital commerce solutions</p>
+        <h3 class="award-title">Digital Commerce Professional</h3>
+        <p class="award-issuer">Infosys Equinox | 2024</p>
+        <p class="award-description">Professional certification in digital commerce solutions</p>
       </div>
-    </div>
-  </div>
 
-  <!-- Award 4 -->
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm rounded-3 award-card h-100">
-      <div class="card-body text-center p-4">
-        <div class="display-4 text-primary mb-3">
+      <!-- Award 4 -->
+      <div class="award-card">
+        <div class="award-icon-wrapper java-dev">
           <i class="bi bi-clipboard-check"></i>
         </div>
-        <h5 class="card-title fw-bold mb-2">Certified Java SE 11 Developer</h5>
-        <p class="text-muted small mb-2">Infosys | 2023</p>
-        <p class="text-secondary">Professional Java certification demonstrating expertise</p>
+        <h3 class="award-title">Certified Java SE 11 Developer</h3>
+        <p class="award-issuer">Infosys | 2023</p>
+        <p class="award-description">Professional Java certification demonstrating expertise</p>
+      </div>
+
+      <!-- Award 5 -->
+      <div class="award-card">
+        <div class="award-icon-wrapper spring-dev">
+          <i class="bi bi-patch-check-fill"></i>
+        </div>
+        <h3 class="award-title">Certified Spring Boot Developer</h3>
+        <p class="award-issuer">Infosys | 2023</p>
+        <p class="award-description">Professional Spring Boot certification and expertise</p>
       </div>
     </div>
   </div>
 
-  <!-- Award 5 -->
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm rounded-3 award-card h-100">
-      <div class="card-body text-center p-4">
-        <div class="display-4" style="color: #10b981;">
-          <i class="bi bi-patch-check-fill"></i>
-        </div>
-        <h5 class="card-title fw-bold mb-2">Certified Spring Boot Developer</h5>
-        <p class="text-muted small mb-2">Infosys | 2023</p>
-        <p class="text-secondary">Professional Spring Boot certification and expertise</p>
-      </div>
-    </div>
-  </div>
-    </div>
-  </div>
+  <style>
+    .awards-section {
+      background: linear-gradient(180deg, #1a1f2e 0%, #0f1419 100%);
+      padding: 6rem 2rem;
+      position: relative;
+      overflow: hidden;
+      color: #edf2f7;
+    }
+
+    .awards-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(0, 212, 212, 0.06) 0%, transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(123, 97, 255, 0.04) 0%, transparent 30%);
+      pointer-events: none;
+    }
+
+    .awards-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    .header-accent {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #00d4d4 0%, #7b61ff 100%);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin: 0 0 0.75rem 0;
+      background: linear-gradient(135deg, #ffffff 0%, #e0f7ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: rgba(237, 242, 247, 0.8);
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* Awards Grid */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.1s both;
+    }
+
+    /* Award Card */
+    .award-card {
+      background: linear-gradient(135deg, rgba(26, 31, 46, 0.8), rgba(15, 20, 25, 0.9));
+      border: 1.5px solid rgba(0, 212, 212, 0.2);
+      border-radius: 1.25rem;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0, 212, 212, 0.05) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .award-card:hover {
+      border-color: rgba(0, 212, 212, 0.5);
+      background: linear-gradient(135deg, rgba(0, 212, 212, 0.08), rgba(123, 97, 255, 0.06));
+      transform: translateY(-12px);
+      box-shadow: 0 25px 60px rgba(0, 212, 212, 0.15);
+    }
+
+    /* Icon Wrapper */
+    .award-icon-wrapper {
+      width: 90px;
+      height: 90px;
+      border-radius: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, rgba(0, 212, 212, 0.15), rgba(123, 97, 255, 0.1));
+      border: 1px solid rgba(0, 212, 212, 0.25);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .award-card:hover .award-icon-wrapper {
+      transform: scale(1.2) rotateY(10deg);
+      background: linear-gradient(135deg, rgba(0, 212, 212, 0.25), rgba(123, 97, 255, 0.2));
+      border-color: rgba(0, 212, 212, 0.4);
+      box-shadow: 0 15px 40px rgba(0, 212, 212, 0.2);
+    }
+
+    .award-icon-wrapper.best-learner { color: #f59e0b; }
+    .award-icon-wrapper.rising-star { color: #00d4d4; }
+    .award-icon-wrapper.digital-commerce { color: #f59e0b; }
+    .award-icon-wrapper.java-dev { color: #7b61ff; }
+    .award-icon-wrapper.spring-dev { color: #10b981; }
+
+    /* Award Title */
+    .award-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Award Issuer */
+    .award-issuer {
+      font-size: 0.9rem;
+      color: #00d4d4;
+      margin: 0;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Award Description */
+    .award-description {
+      font-size: 0.95rem;
+      color: rgba(237, 242, 247, 0.85);
+      margin: 0;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .awards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.75rem;
+      }
+
+      .section-title {
+        font-size: 2.6rem;
+      }
+
+      .award-card {
+        padding: 2rem 1.75rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .awards-section {
+        padding: 4rem 1.5rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .awards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .award-card {
+        padding: 1.75rem 1.5rem;
+        gap: 1.25rem;
+      }
+
+      .award-icon-wrapper {
+        width: 75px;
+        height: 75px;
+        font-size: 2rem;
+        border-radius: 1.25rem;
+      }
+
+      .award-title {
+        font-size: 1rem;
+      }
+
+      .award-issuer {
+        font-size: 0.85rem;
+      }
+
+      .award-description {
+        font-size: 0.9rem;
+      }
+
+      .section-header {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .awards-section {
+        padding: 3rem 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .awards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .award-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 1rem;
+        gap: 1rem;
+      }
+
+      .award-icon-wrapper {
+        width: 65px;
+        height: 65px;
+        font-size: 1.75rem;
+        border-radius: 1rem;
+      }
+
+      .award-title {
+        font-size: 0.95rem;
+      }
+
+      .award-issuer {
+        font-size: 0.8rem;
+      }
+
+      .award-description {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
 </div>

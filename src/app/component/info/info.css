@@ -1,5 +1,5 @@
 .card-header {
-  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%) !important;
+  background: linear-gradient(135deg, #00d4d4 0%, #7c3aed 100%) !important;
   border-radius: 0.75rem 0.75rem 0 0 !important;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .card-header.bg-success {
-  background: linear-gradient(135deg, #198754 0%, #144e34 100%) !important;
+  background: linear-gradient(135deg, #00d4d4 0%, #7c3aed 100%) !important;
 }
 
 .card-header i {
@@ -25,7 +25,7 @@
 
 /* Skills Section */
 .card-body h6 {
-  color: #0d6efd;
+  color: #00d4d4;
   font-weight: 700;
   margin-bottom: 1rem;
   position: relative;
@@ -39,19 +39,19 @@
   left: 0;
   width: 30px;
   height: 3px;
-  background: linear-gradient(90deg, #0d6efd 0%, #0dcaf0 100%);
+  background: linear-gradient(90deg, #00d4d4 0%, #7c3aed 100%);
   border-radius: 2px;
 }
 
 .card-body h6.text-success::after {
-  background: linear-gradient(90deg, #198754 0%, #1ab578 100%);
+  background: linear-gradient(90deg, #00d4d4 0%, #7c3aed 100%);
 }
 
 /* Badges */
 .badge {
-  background-color: #f0f7ff !important;
-  color: #0d6efd !important;
-  border: 1px solid #d0e0f5;
+  background-color: #e0f7ff !important;
+  color: #00d4d4 !important;
+  border: 1px solid #b3e5ff;
   padding: 0.5rem 1rem;
   font-weight: 600;
   border-radius: 20px;
@@ -60,11 +60,11 @@
 }
 
 .badge:hover {
-  background-color: #0d6efd !important;
-  color: white !important;
-  border-color: #0d6efd !important;
+  background-color: #00d4d4 !important;
+  color: #1a1a2e !important;
+  border-color: #00d4d4 !important;
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 212, 212, 0.3);
 }
 
 /* Progress Bars */
@@ -76,7 +76,7 @@
 }
 
 .progress-bar {
-  background: linear-gradient(90deg, #0d6efd 0%, #0dcaf0 100%);
+  background: linear-gradient(90deg, #00d4d4 0%, #7c3aed 100%);
   border-radius: 10px;
   transition: width 0.6s ease;
 }
@@ -94,12 +94,12 @@
 }
 
 .list-unstyled li:hover {
-  color: #0d6efd;
+  color: #00d4d4;
   padding-left: 0.5rem;
 }
 
 .bi-check-circle {
-  color: #198754;
+  color: #00d4d4;
   margin-right: 0.5rem;
   font-size: 1rem;
 }
@@ -112,8 +112,8 @@
 }
 
 .card:hover {
-  border-color: #0d6efd;
-  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15) !important;
+  border-color: #00d4d4;
+  box-shadow: 0 10px 30px rgba(0, 212, 212, 0.15) !important;
 }
 
 @media (max-width: 768px) {

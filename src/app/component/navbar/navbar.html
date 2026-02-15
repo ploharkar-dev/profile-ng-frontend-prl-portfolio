@@ -1,37 +1,89 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-lg" style="background: linear-gradient(135deg, #0f172a 0%, #1a1a2e 50%, #0f172a 100%); border-bottom: 2px solid #00d4d4; backdrop-filter: blur(10px);" #navbar>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#home" style="font-size: 1.5rem; color: #00d4d4; letter-spacing: 1px; text-transform: uppercase; font-weight: 900;">
-      <i class="bi bi-code-slash" style="color: #00d4d4; margin-right: 8px; animation: glow 2s ease-in-out infinite;"></i> Pinakeshwar
+    <a class="navbar-brand fw-bold" href="#introduction">
+      <i class="bi bi-code-slash"></i><span class="ms-2">Hi, I’m glad you’re here!</span>
     </a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto gap-2">
         <li class="nav-item">
-          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'home'}" href="#home" (click)="setActive('home')">Home</a>
+          <a
+            class="nav-link fw-500"
+            [ngClass]="{ active: activeSection === 'home' }"
+            href="#introduction"
+            (click)="setActive('home')"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'experience'}" href="#experience" (click)="setActive('experience')">Experience</a>
+          <a
+            class="nav-link fw-500"
+            [ngClass]="{ active: activeSection === 'experience' }"
+            href="#experience"
+            (click)="setActive('experience')"
+            >Experience</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'projects'}" href="#projects" (click)="setActive('projects')">Projects</a>
+          <a
+            class="nav-link fw-500"
+            [ngClass]="{ active: activeSection === 'projects' }"
+            href="#projects"
+            (click)="setActive('projects')"
+            >Projects</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'education'}" href="#education" (click)="setActive('education')">Education</a>
+          <a
+            class="nav-link fw-500"
+            [ngClass]="{ active: activeSection === 'education' }"
+            href="#education"
+            (click)="setActive('education')"
+            >Education</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'awards'}" href="#awards" (click)="setActive('awards')">Awards</a>
+          <a
+            class="nav-link fw-500"
+            [ngClass]="{ active: activeSection === 'awards' }"
+            href="#awards"
+            (click)="setActive('awards')"
+            >Awards</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-600" [ngClass]="{'active': activeSection === 'contact'}" href="#contact" (click)="setActive('contact')">Contact</a>
+          <a
+            class="nav-link fw-500"
+            [ngClass]="{ active: activeSection === 'contact' }"
+            href="#contact"
+            (click)="setActive('contact')"
+            >Contact</a
+          >
         </li>
-        <li class="nav-item ms-3 d-flex gap-2">
-          <a class="nav-link fw-bold px-3 py-2" href="https://www.linkedin.com/in/omkarloharkar/" target="_blank" style="color: #0A66C2; border: 2px solid #0A66C2; border-radius: 25px; transition: all 0.3s ease; font-size: 1.1rem;" onmouseover="this.style.backgroundColor='#0A66C2'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#0A66C2';">
-            <i class="bi bi-linkedin"></i> LinkedIn
+        <li class="nav-item ms-2 ps-3 border-start border-secondary d-flex align-items-center">
+          <a class="nav-link p-0 pe-3 d-inline-flex"
+            href="https://www.linkedin.com/in/omkarloharkar/"
+            target="_blank"
+            title="LinkedIn Profile"
+            aria-label="LinkedIn" >
+            <i class="bi bi-linkedin"></i>
           </a>
-          <a class="nav-link fw-bold px-3 py-2" href="https://github.com/ploharkar-dev/" target="_blank" style="color: #e0e7ff; border: 2px solid #e0e7ff; border-radius: 25px; transition: all 0.3s ease; font-size: 1.1rem;" onmouseover="this.style.backgroundColor='#e0e7ff'; this.style.color='#1a1a2e';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#e0e7ff';">
-            <i class="bi bi-github"></i> GitHub
+          <a class="nav-link p-0 d-inline-flex"
+            href="https://github.com/ploharkar-dev/"
+            target="_blank"
+            title="GitHub Profile"
+            aria-label="GitHub" >
+            <i class="bi bi-github"></i>
           </a>
         </li>
       </ul>
@@ -40,59 +92,103 @@
 </nav>
 
 <style>
-  @keyframes glow {
-    0%, 100% {
-      text-shadow: 0 0 5px #00d4d4;
-    }
-    50% {
-      text-shadow: 0 0 15px #00d4d4, 0 0 25px rgba(0, 212, 212, 0.5);
-    }
+  /* Navbar background (gray) */
+  .navbar {
+    background-color: #6c757d; /* gray */
   }
 
   .navbar-brand {
-    transition: all 0.3s ease;
-    font-size: 1.5rem !important;
+    color: #ffffff !important;
+    transition: color 0.2s ease;
+  }
+  .navbar-brand:hover {
+    color: #f8f9fa !important;
   }
 
-  .navbar-brand:hover {
-    letter-spacing: 3px;
-    text-shadow: 0 0 20px rgba(0, 212, 212, 0.6);
+  /* keep items on one line */
+  .navbar-nav {
+    white-space: nowrap;
+    flex-wrap: nowrap;
   }
 
   .nav-link {
     position: relative;
     font-size: 0.95rem;
-    color: #e0e7ff !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: #ffffff !important; /* make nav text white */
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
+    padding: 0.4rem 0.6rem !important;
   }
 
-  .nav-link::before {
+  .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: 0;
     left: 50%;
     width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #00d4d4, #7c3aed);
-    border-radius: 2px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.85); /* subtle white underline */
     transform: translateX(-50%);
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.22s ease;
   }
 
-  .nav-link:hover {
-    color: #00d4d4 !important;
-    transform: translateY(-3px);
-  }
-
-  .nav-link:hover::before,
-  .nav-link.active::before {
-    width: 100%;
-  }
-
+  .nav-link:hover,
   .nav-link.active {
-    color: #00d4d4 !important;
-    font-weight: 700;
+    color: #ffffff !important;
+    font-weight: 600;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 70%;
+    opacity: 0.95;
+  }
+
+  /* Social icons (LinkedIn / GitHub) white */
+  .navbar .bi {
+    color: #ffffff !important;
+    font-size: 1.05rem;
+    vertical-align: middle;
+  }
+
+  /* Separator left of social icons */
+  .nav-item.ms-2.ps-3.border-start {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* Toggler (hamburger) visible in white */
+  .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.18rem rgba(255, 255, 255, 0.06);
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  /* Make sure collapsed menu links also appear white */
+  .navbar-collapse .nav-link {
+    color: #ffffff !important;
+  }
+
+  /* small screens: reduce spacing to keep single line where possible */
+  @media (max-width: 900px) {
+    .nav-link {
+      padding: 0.35rem 0.45rem !important;
+      font-size: 0.9rem;
+    }
+    .navbar-brand {
+      font-size: 1rem;
+    }
+  }
+
+  /* accessibility: focus visible */
+  .nav-link:focus {
+    outline: 2px dashed rgba(255, 255, 255, 0.12);
+    outline-offset: 2px;
   }
 </style>
