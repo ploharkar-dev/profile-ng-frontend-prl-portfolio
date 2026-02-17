@@ -1,25 +1,5 @@
 <div class="contact-section">
   <div class="contact-wrapper">
-    <!-- Toast Notifications Container -->
-    <div class="toast-container" [class.has-toasts]="toasts().length > 0">
-      @for (toast of toasts(); track toast.id) {
-        <div [class]="'toast toast-' + toast.type" role="alert" aria-live="polite">
-          <div class="toast-content">
-            <span class="toast-message">{{ toast.message }}</span>
-            <button
-              class="toast-close"
-              type="button"
-              (click)="removeToast(toast.id)"
-              aria-label="Close notification"
-            >
-              <i class="bi bi-x"></i>
-            </button>
-          </div>
-          <div class="toast-progress" [ngClass]="'progress-' + toast.type"></div>
-        </div>
-      }
-    </div>
-
     <!-- Section Header -->
     <div class="section-header">
       <div class="header-accent"></div>
@@ -82,7 +62,12 @@
         >
           <i class="bi bi-github"></i>
         </a>
-        <a href="https://twitter.com" target="_blank" class="social-icon twitter-icon" title="Twitter">
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          class="social-icon twitter-icon"
+          title="Twitter"
+        >
           <i class="bi bi-twitter"></i>
         </a>
       </div>
@@ -91,71 +76,33 @@
     <!-- Contact Form -->
     <div class="contact-form-wrapper">
       <h3 class="form-title">Send Me a Message</h3>
-      <form class="contact-form" (ngSubmit)="onSubmit($event)">
+      <form class="contact-form">
         <div class="form-grid">
           <div class="form-group">
-            <label for="name">Full Name <span class="required">*</span></label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Your name"
-              [value]="formData().name"
-              (input)="updateField('name', $any($event.target).value)"
-              [disabled]="isSubmitting()"
-              required
-            />
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
           </div>
           <div class="form-group">
-            <label for="email">Email Address <span class="required">*</span></label>
-            <input
-              type="email"
-              id="email"
-              placeholder="your@email.com"
-              [value]="formData().email"
-              (input)="updateField('email', $any($event.target).value)"
-              [disabled]="isSubmitting()"
-              required
-            />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
           </div>
         </div>
 
         <div class="form-group">
-          <label for="subject">Subject <span class="required">*</span></label>
-          <input
-            type="text"
-            id="subject"
-            placeholder="What's this about?"
-            [value]="formData().subject"
-            (input)="updateField('subject', $any($event.target).value)"
-            [disabled]="isSubmitting()"
-            required
-          />
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="What's this about?" required />
         </div>
 
         <div class="form-group">
-          <label for="message">Message <span class="required">*</span></label>
-          <textarea
-            id="message"
-            placeholder="Your message here..."
-            rows="5"
-            [value]="formData().message"
-            (input)="updateField('message', $any($event.target).value)"
-            [disabled]="isSubmitting()"
-            required
-          ></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Your message here..." rows="5" required></textarea>
         </div>
 
-        <button type="submit" class="send-btn" [disabled]="isSubmitting()">
-          @if (isSubmitting()) {
-            <i class="bi bi-hourglass-split spinning"></i>
-            <span>Sending...</span>
-          } @else {
-            <span>Send Message</span>
-            <i class="bi bi-arrow-right"></i>
-          }
+        <button type="submit" class="send-btn">
+          Send Message
+          <i class="bi bi-arrow-right"></i>
         </button>
       </form>
     </div>
   </div>
 </div>
-
