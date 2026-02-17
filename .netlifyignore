@@ -1,0 +1,20 @@
+# Exclude documentation files not needed for production
+ACCESSIBILITY.md
+DEPLOYMENT_GUIDE.md
+DEPLOYMENT_READY.md
+DEPLOYMENT.md
+FINAL_PRODUCTION_OPTIMIZATION.md
+PRODUCTION_CHECKLIST.md
+PRODUCTION_READY.md
+
+# Exclude common development files
+.git
+.gitignore
+node_modules
+.angular
+.vscode
+.editorconfig
+.prettierignore
+.prettierrc
+tsconfig.spec.json
+karma.conf.js
