@@ -1,5 +1,7 @@
 # Pinakeshwar Portfolio
 
+**Live Preview:** https://deploy-preview-9--curious-choux-d7442b.netlify.app/
+
 [![Deploy Status](https://img.shields.io/badge/Status-Production-brightgreen)]()
 [![Angular Version](https://img.shields.io/badge/Angular-v21.1.0-red)](https://angular.io)
 [![Node Version](https://img.shields.io/badge/Node-v20+-green)](https://nodejs.org)
@@ -8,7 +10,7 @@
 
 A modern, responsive portfolio website showcasing expertise as a Senior Software Developer specializing in microservices architecture, cloud-native solutions, and distributed systems.
 
-**Live Portfolio:** https://pinakeshwar-portfolio.vercel.app
+**Live Portfolio:** https://pinakeshwar-portfolio.netlify.app
 
 ---
 
@@ -156,19 +158,25 @@ npm test
 
 ### Automatic Deployment (Recommended)
 
-**Vercel** (Free tier available)
+**Netlify** (Free tier available)
 1. Push code to GitHub
-2. Connect repository to Vercel (vercel.com)
-3. Automatic deployment on each push
+2. Connect repository to Netlify (netlify.com)
+3. Automatic deployment on each push via `netlify.toml`
 4. Custom domain support included
 
-**Other Options:**
-- Netlify
-- GitHub Pages
-- AWS Amplify
-- Docker + Any hosting
+**Deployment Configuration:**
+- Build Command: `npm run build:prod`
+- Publish Directory: `dist/myprofile/browser`
+- Node Version: 20
+- SPA Routing: Configured for Angular routing
+- Security Headers: Enabled
+- Smart Caching: Optimized asset & HTML caching
 
-**Full Deployment Guide:** See [DEPLOYMENT.md](DEPLOYMENT.md)
+**To Deploy:**
+```bash
+git push  # Push to your GitHub repository
+# Netlify will automatically detect netlify.toml and deploy
+```
 
 ---
 
@@ -185,11 +193,13 @@ Before deploying to production, ensure you've completed:
 - [x] All links tested
 - [x] OnPush change detection verified
 - [x] Bundle size optimized (393.69 kB / 86.77 kB gzipped)
+- [x] Netlify configuration (`netlify.toml`) added
+- [x] Unwanted documentation files removed
 
-**Full Checklists:**
-- See [PRODUCTION_CHECKLIST.md](PRODUCTION_CHECKLIST.md)
-- See [DEPLOYMENT_READY.md](DEPLOYMENT_READY.md) - **[NEW] Latest deployment status**
-- See [FINAL_PRODUCTION_OPTIMIZATION.md](FINAL_PRODUCTION_OPTIMIZATION.md) - **[NEW] Performance optimization details**
+**Deployment Status:**
+- ✅ Netlify configuration ready
+- ✅ All production optimizations applied
+- ✅ Ready for live deployment
 
 ---
 
@@ -227,14 +237,16 @@ See [LICENSE](LICENSE) file for full details.
 ## 🔒 Security & Compliance
 
 - ✅ WCAG 2.1 AA Accessible
-- ✅ Security Headers Implemented
+- ✅ Security Headers Implemented (via netlify.toml)
 - ✅ Content Security Policy Enabled
 - ✅ HTTPS Only
 - ✅ SEO Optimized
 - ✅ No Sensitive Data Exposed
 - ✅ Regular Security Updates
-
-**See [ACCESSIBILITY.md](ACCESSIBILITY.md) for detailed accessibility information**
+- ✅ X-Content-Type-Options: nosniff
+- ✅ X-Frame-Options: DENY
+- ✅ X-XSS-Protection: 1; mode=block
+- ✅ Referrer-Policy: strict-origin-when-cross-origin
 
 ---
 
