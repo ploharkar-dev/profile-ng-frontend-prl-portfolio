@@ -1,13 +1,6 @@
-# Handle Angular SPA routing
-# Netlify serves actual files first (js, css, images, fonts)
-# All other requests go to index.html for Angular routing
+# Angular SPA routing
+# Make sure to serve index.html for all routes that don't match actual files
+/*    /index.html   200
 
-# Explicit paths that should not redirect
-/assets/*  200
-/media/*   200
-/fonts/*   200
-
-# Catch-all for Angular SPA routing - history API fallback
-/*         /index.html    200
 
 
