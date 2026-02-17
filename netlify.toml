@@ -21,11 +21,13 @@
   command = "npm run build:prod"
   publish = "dist/myprofile/browser"
 
-# SPA routing - direct all requests to index.html for Angular routing
+# SPA routing - redirect all requests to index.html for Angular routing
+# This must come before other redirects
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
 # Security headers
 [[headers]]
